@@ -1,13 +1,24 @@
-import css from './Button.module.css'
+import clsx from "clsx";
+import css from "./Button.module.css";
+
+const Button = ({
+  selected = false,
+  type = "button",
+  children,
+  ...otherProps
+}) => {
+  return (
+    <button
+      className={clsx(css.btn, {
+        [css.isSelected]: selected
+      })}
+      type={type}
+      {...otherProps}
+    >
+      {children}
+    </button>
+  );
+};
 
 
-const Button = ({handleLoadMore}) => {    
-    return(
-        <>
-            <button type='button' className={css.button} onClick={handleLoadMore}>Load more</button>
-        </>
-    )
-}
-
-
-export default Button
+export default Button;
