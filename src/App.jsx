@@ -16,6 +16,11 @@ const App = () => {
 
 export default App;
 
+// createStore(reducer, preloadedState, enhancer)
+// reducer - функція із логікою зміни стану Redux. Обов'язковий параметр.
+// preloadedState - початковий стан програми. Це має бути об'єкт тієї ж форми, що й, як мінімум, частина стану. Необов'язковий параметр.
+// enhancer - функція розширення можливостей стору. Необов'язковий параметр.
+
 
 // npm install redux
 // npm install react-redux
